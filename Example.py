@@ -22,11 +22,16 @@ model.fit(X_train, y_train) # Train on training data
 # Step 5: Make Predictions
 y_pred = model.predict(X_test)
 
-# Step 6: Evaluate the Model
+# Step 6: View actual vs predicted
+print("y_test:", y_test.tolist())     # Ground truth (real labels)
+print("y_pred:", y_pred.tolist())     # Model's prediction
+
+
+# Step 7: Evaluate the Model
 print("Accuracy:", accuracy_score(y_test, y_pred))
 print("\nClassification Report:\n", classification_report(y_test, y_pred))
 
-# Step 7: Visualize the Model
+# Step 8: Visualize the Model
 feature_names = iris.feature_names
 class_names = iris.target_names
 
